@@ -1,0 +1,11 @@
+<header class="cabecera">
+  <div class="contenedor cabecera__inner">
+    <a class="logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="menu" aria-label="Menú principal">
+      {% for item in site.data.navegacion %}
+        <a href="{{ item.url | relative_url }}"
+           {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.titulo }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
