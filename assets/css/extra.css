@@ -1,0 +1,99 @@
+/* =========================================================
+   Estilos de las piezas auxiliares: archivo, navegación
+   entre entradas y página 404.
+   ========================================================= */
+
+/* ---------- Archivo ---------- */
+.archivo__anio h2 {
+  color: var(--fuego-2);
+  border-bottom: 1px solid var(--borde);
+  padding-bottom: .5rem;
+}
+
+.archivo__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.archivo__lista li {
+  display: flex;
+  gap: 1rem;
+  padding: .6rem 0;
+  border-bottom: 1px dashed var(--borde);
+}
+
+.archivo__lista time {
+  color: var(--texto-suave);
+  font-variant-numeric: tabular-nums;
+  min-width: 3.5rem;
+}
+
+/* ---------- Navegación anterior / siguiente ---------- */
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.post-nav a {
+  display: block;
+  padding: 1rem;
+  background: var(--fondo-2);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.post-nav a:hover { border-color: var(--fuego); }
+
+.post-nav span {
+  display: block;
+  font-size: .85rem;
+  color: var(--fuego-2);
+  margin-bottom: .25rem;
+}
+
+.post-nav__next {
+  grid-column: 2;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .post-nav { grid-template-columns: 1fr; }
+  .post-nav__next { grid-column: auto; }
+}
+
+/* ---------- Página 404 ---------- */
+.error-404 {
+  text-align: center;
+  padding-block: 4rem;
+}
+
+.error-404__codigo {
+  font-size: clamp(5rem, 20vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(90deg, var(--fuego), var(--fuego-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.boton {
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  border-radius: 999px;
+  background: var(--fuego);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background: var(--fuego-2);
+  color: var(--fondo);
+}

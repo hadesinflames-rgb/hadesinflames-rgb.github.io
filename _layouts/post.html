@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<article class="entrada">
+
+  <!-- 1. Cabecera de la entrada -->
+  <header class="entrada__cabecera">
+    <p class="entrada__categoria">{{ page.categories | first }}</p>
+    <h1>{{ page.title }}</h1>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+    {% if page.description %}
+      <p class="entrada__descripcion">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <!-- 2. Imagen destacada (solo si la entrada tiene) -->
+  {% if page.image %}
+    <figure class="entrada__imagen">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}">
+      {% if page.image_credit %}
+        <figcaption>{{ page.image_credit }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
+
+  <!-- 3. Texto de la entrada -->
+  <div class="entrada__contenido">
+    {{ content }}
+  </div>
+
+  <!-- 4. Pie con las etiquetas -->
+  {% if page.tags.size > 0 %}
+    <footer class="entrada__pie">
+      <ul class="etiquetas">
+        {% for tag in page.tags %}
+          <li>#{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    </footer>
+  {% endif %}
+
+</article>
+
+<!-- 5. Enlaces a la entrada anterior y siguiente -->
+{% include post-nav.html %}
