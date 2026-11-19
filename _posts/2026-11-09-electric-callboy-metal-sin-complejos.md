@@ -5,8 +5,8 @@ categories: [metal]
 tags: [electric callboy, metalcore, electronicore, directo]
 description: "Cómo una banda alemana mezcló breakdowns, sintes noventeros y pelucas para convertirse en la fiesta más grande del metal actual."
 image: /assets/img/electric-callboy.jpg
-image_alt: "Electric Callboy tocando en directo en un festival, con el público saltando"
-image_credit: "Foto: [AUTOR], Wikimedia Commons, licencia CC BY-SA"
+image_alt: "Público con las manos en alto frente a un escenario iluminado con focos amarillos"
+image_credit: "Foto: Unsplash"
 ---
 
 Si alguien te dice que el metal es un género serio, enséñale un vídeo de **Electric Callboy**. Breakdowns que te hunden el pecho, sintetizadores de discoteca de los 90, chándales fosforitos y un sentido del humor que no pide perdón. Y lo mejor: detrás de toda esa locura hay una banda que suena brutal.

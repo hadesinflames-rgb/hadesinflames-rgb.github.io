@@ -1,0 +1,31 @@
+---
+title: Inicio
+---
+<!-- Portada: presentación del blog -->
+<section class="portada">
+  <h1 class="portada__titulo">{{ site.title }}</h1>
+  <p class="portada__lema">{{ site.description }}</p>
+</section>
+
+<!-- Listado de entradas en tarjetas -->
+<section aria-labelledby="ultimas">
+  <h2 id="ultimas" class="seccion__titulo">Últimas entradas</h2>
+
+  <div class="tarjetas">
+    {% for post in site.posts %}
+      <article class="tarjeta">
+        <a class="tarjeta__enlace" href="{{ post.url | relative_url }}">
+          {% if post.image %}
+            <img class="tarjeta__imagen" src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}" loading="lazy">
+          {% endif %}
+          <div class="tarjeta__cuerpo">
+            <span class="entrada__categoria">{{ post.categories | first }}</span>
+            <h3 class="tarjeta__titulo">{{ post.title }}</h3>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+            <p>{{ post.description }}</p>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+</section>

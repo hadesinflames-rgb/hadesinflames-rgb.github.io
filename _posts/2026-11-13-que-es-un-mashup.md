@@ -5,8 +5,8 @@ categories: [producción]
 tags: [mashup, remezcla, producción musical, dj]
 description: "Qué es un mashup, cómo se construye uno y por qué The Grey Album de Danger Mouse cambió las reglas del juego."
 image: /assets/img/mashup-mesa-de-mezclas.jpg
-image_alt: "Manos sobre una mesa de mezclas de DJ iluminada con luces de colores"
-image_credit: "Foto: [AUTOR] en Unsplash"
+image_alt: "Portátil con un programa de DJ sobre una controladora de mezclas iluminada en azul"
+image_credit: "Foto: Unsplash"
 ---
 
 Seguro que alguna vez has escuchado una canción y has pensado: *"esto suena igual que la base de otra"*. Pues de esa idea nace el **mashup**: coger dos (o más) canciones y fusionarlas en una sola, de forma que parezca que siempre debieron ir juntas.

@@ -5,8 +5,8 @@ categories: [pop]
 tags: [pablo alborán, pop español, cantautor, discos]
 description: "Repaso a la carrera del cantautor malagueño, desde 'Solamente tú' hasta KM0, su disco más personal."
 image: /assets/img/pablo-alboran.jpg
-image_alt: "Pablo Alborán cantando en el escenario con una guitarra acústica"
-image_credit: "Foto: [AUTOR / FUENTE]"
+image_alt: "Primer plano de unas manos tocando una guitarra acústica"
+image_credit: "Foto: Unsplash"
 ---
 
 Sí, en un blog que se llama *Hades in Flames* también hay sitio para el pop. Porque la buena música no entiende de etiquetas, y **Pablo Alborán** es uno de esos artistas que pueden ponerte la piel de gallina con una guitarra y una voz.
