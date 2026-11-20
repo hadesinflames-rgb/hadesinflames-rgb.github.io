@@ -1,10 +1,44 @@
----
-title: Inicio
----
-<!-- Portada: presentación del blog -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio · Hades in Flames</title>
+  <meta name="description" content="Un blog de música sin etiquetas, del pop al metal">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/extra.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <!-- Aplica el tema guardado antes de pintar la página, para que no parpadee -->
+  <script>
+    try { if (localStorage.getItem('tema') === 'claro') document.documentElement.classList.add('tema-claro'); } catch (e) {}
+  </script>
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="cabecera">
+  <div class="contenedor cabecera__inner">
+    <a class="logo" href="/">Hades in Flames</a>
+    <nav class="menu" aria-label="Menú principal">
+      
+        <a href="/"
+           aria-current="page">Inicio</a>
+      
+        <a href="/archivo/"
+           >Archivo</a>
+      
+        <a href="/sobre-mi/"
+           >Sobre mí</a>
+      
+      <button class="tema-toggle" id="tema-toggle" type="button" aria-label="Cambiar a modo claro">☀</button>
+    </nav>
+  </div>
+</header>
+
+  <main class="contenedor">
+    <!-- Portada: presentación del blog -->
 <section class="portada">
-  <h1 class="portada__titulo">{{ site.title }}</h1>
-  <p class="portada__lema">{{ site.description }}</p>
+  <h1 class="portada__titulo">Hades in Flames</h1>
+  <p class="portada__lema">Un blog de música sin etiquetas, del pop al metal</p>
 </section>
 
 <!-- Listado de entradas en tarjetas -->
@@ -12,20 +46,73 @@ title: Inicio
   <h2 id="ultimas" class="seccion__titulo">Últimas entradas</h2>
 
   <div class="tarjetas">
-    {% for post in site.posts %}
+    
       <article class="tarjeta">
-        <a class="tarjeta__enlace" href="{{ post.url | relative_url }}">
-          {% if post.image %}
-            <img class="tarjeta__imagen" src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}" loading="lazy">
-          {% endif %}
+        <a class="tarjeta__enlace" href="/2026/11/12-canciones-para-entrenar/">
+          
+            <img class="tarjeta__imagen" src="/assets/img/entreno-cascos.jpg" alt="Auriculares colgados de la barra de una máquina de gimnasio" loading="lazy">
+          
           <div class="tarjeta__cuerpo">
-            <span class="entrada__categoria">{{ post.categories | first }}</span>
-            <h3 class="tarjeta__titulo">{{ post.title }}</h3>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
-            <p>{{ post.description }}</p>
+            <span class="entrada__categoria">listas</span>
+            <h3 class="tarjeta__titulo">12 canciones para darlo todo en el entreno</h3>
+            <time datetime="2026-11-15T10:00:00+01:00">15/11/2026</time>
+            <p>Mi playlist para el gimnasio: metal, rock y alguna sorpresa para cuando necesitas ese último empujón.</p>
           </div>
         </a>
       </article>
-    {% endfor %}
+    
+      <article class="tarjeta">
+        <a class="tarjeta__enlace" href="/2026/11/que-es-un-mashup/">
+          
+            <img class="tarjeta__imagen" src="/assets/img/mashup-mesa-de-mezclas.jpg" alt="Portátil con un programa de DJ sobre una controladora de mezclas iluminada en azul" loading="lazy">
+          
+          <div class="tarjeta__cuerpo">
+            <span class="entrada__categoria">producción</span>
+            <h3 class="tarjeta__titulo">¿Qué es un mashup? El arte de mezclar dos canciones en una</h3>
+            <time datetime="2026-11-13T20:00:00+01:00">13/11/2026</time>
+            <p>Qué es un mashup, cómo se construye uno y por qué The Grey Album de Danger Mouse cambió las reglas del juego.</p>
+          </div>
+        </a>
+      </article>
+    
+      <article class="tarjeta">
+        <a class="tarjeta__enlace" href="/2026/11/pablo-alboran-km0/">
+          
+            <img class="tarjeta__imagen" src="/assets/img/pablo-alboran.jpg" alt="Primer plano de unas manos tocando una guitarra acústica" loading="lazy">
+          
+          <div class="tarjeta__cuerpo">
+            <span class="entrada__categoria">pop</span>
+            <h3 class="tarjeta__titulo">Pablo Alborán y KM0: volver a empezar desde cero</h3>
+            <time datetime="2026-11-11T19:00:00+01:00">11/11/2026</time>
+            <p>Repaso a la carrera del cantautor malagueño, desde 'Solamente tú' hasta KM0, su disco más personal.</p>
+          </div>
+        </a>
+      </article>
+    
+      <article class="tarjeta">
+        <a class="tarjeta__enlace" href="/2026/11/electric-callboy-metal-sin-complejos/">
+          
+            <img class="tarjeta__imagen" src="/assets/img/electric-callboy.jpg" alt="Público con las manos en alto frente a un escenario iluminado con focos amarillos" loading="lazy">
+          
+          <div class="tarjeta__cuerpo">
+            <span class="entrada__categoria">metal</span>
+            <h3 class="tarjeta__titulo">Electric Callboy: metal sin complejos (y con mucho tecno)</h3>
+            <time datetime="2026-11-09T18:00:00+01:00">09/11/2026</time>
+            <p>Cómo una banda alemana mezcló breakdowns, sintes noventeros y pelucas para convertirse en la fiesta más grande del metal actual.</p>
+          </div>
+        </a>
+      </article>
+    
   </div>
 </section>
+
+  </main>
+  <footer class="pie">
+  <div class="contenedor">
+    <p>© 2026 Dani Martínez · Hades in Flames</p>
+    <p>Hecho con Jekyll y alojado en GitHub Pages</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -6,49 +6,42 @@ Blog estático sobre música, creado como **Actividad 1 (Laboratorio: creación 
 
 ## Tecnologías
 
-- **HTML5** y **CSS3** escritos a mano, sin frameworks ni temas prefabricados
-- **Jekyll 4** como generador de sitios estáticos (plantillas con Liquid)
-- **Markdown** para el contenido de las entradas
-- **GitHub Pages** para el alojamiento y la publicación automática
+- **HTML5** semántico y **CSS3** escritos a mano, sin frameworks ni temas prefabricados
+- **JavaScript nativo** para la interactividad (sin librerías)
+- **Jekyll** como generador de sitios estáticos durante el desarrollo
+- **GitHub Pages** para el alojamiento
 
-## Estructura del proyecto
+## Qué contiene este repositorio
+
+Este repositorio contiene el **código final** del blog, es decir, el HTML, CSS y JavaScript que interpreta el navegador. Las plantillas y las entradas en Markdown que usa Jekyll para generarlo se mantienen en una carpeta de trabajo aparte.
 
 ```
-├── _config.yml          # Configuración general del sitio
-├── _data/
-│   └── navegacion.yml   # Enlaces del menú principal
-├── _includes/           # Fragmentos reutilizables
-│   ├── header.html      # Cabecera y menú
-│   ├── footer.html      # Pie de página
-│   └── post-nav.html    # Enlaces anterior / siguiente
-├── _layouts/            # Plantillas
-│   ├── default.html     # Plantilla base de todas las páginas
-│   └── post.html        # Plantilla de las entradas
-├── _posts/              # Entradas del blog en Markdown
-├── assets/
-│   ├── css/             # Hojas de estilo
-│   └── img/             # Imágenes y favicon
-├── index.html           # Portada con el listado de entradas
-├── archivo.html         # Archivo de entradas por año
-├── sobre-mi.md          # Página "Sobre mí"
-└── 404.html             # Página de error personalizada
+├── index.html            # Portada con el listado de entradas
+├── archivo/              # Archivo de entradas por año
+├── sobre-mi/             # Página "Sobre mí"
+├── 2026/11/…             # Las entradas del blog
+├── 404.html              # Página de error personalizada
+└── assets/
+    ├── css/
+    │   ├── style.css     # Estilos principales
+    │   └── extra.css     # Archivo, navegación, 404, modo claro y visor
+    ├── js/
+    │   └── main.js       # Modo claro/oscuro y visor de imágenes
+    └── img/              # Imágenes y favicon
 ```
 
-## Ejecutar en local
+El archivo `.nojekyll` indica a GitHub Pages que publique los archivos tal cual, sin procesarlos.
 
-Requisitos: Ruby (con DevKit en Windows) y Bundler.
+## Funcionalidades
 
-```bash
-bundle install
-bundle exec jekyll serve --livereload
-```
-
-Después, abrir http://localhost:4000
-
-## Publicación
-
-Cada `git push` a la rama `main` hace que GitHub Pages regenere y publique el sitio automáticamente.
+- Portada con tarjetas y rejilla adaptable (CSS Grid)
+- Menú de navegación con la página activa marcada
+- Enlaces "anterior / siguiente" entre entradas y archivo por fechas
+- Diseño adaptable a móvil (responsive)
+- **Modo claro / oscuro** con un botón (JavaScript)
+- **Visor para ampliar las imágenes** de las entradas (JavaScript)
+- Página 404 personalizada
 
 ## Créditos de las imágenes
 
-Las imágenes proceden de bancos de imágenes libres (Unsplash, Wikimedia Commons). El autor y la licencia de cada una se indican al pie de la imagen en su entrada.
+Las fotografías proceden de Unsplash, banco de imágenes de uso libre.

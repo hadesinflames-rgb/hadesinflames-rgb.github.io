@@ -1,10 +1,54 @@
----
-title: Página no encontrada
-permalink: /404.html
----
-<section class="error-404">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada · Hades in Flames</title>
+  <meta name="description" content="Un blog de música sin etiquetas, del pop al metal">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/extra.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <!-- Aplica el tema guardado antes de pintar la página, para que no parpadee -->
+  <script>
+    try { if (localStorage.getItem('tema') === 'claro') document.documentElement.classList.add('tema-claro'); } catch (e) {}
+  </script>
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="cabecera">
+  <div class="contenedor cabecera__inner">
+    <a class="logo" href="/">Hades in Flames</a>
+    <nav class="menu" aria-label="Menú principal">
+      
+        <a href="/"
+           >Inicio</a>
+      
+        <a href="/archivo/"
+           >Archivo</a>
+      
+        <a href="/sobre-mi/"
+           >Sobre mí</a>
+      
+      <button class="tema-toggle" id="tema-toggle" type="button" aria-label="Cambiar a modo claro">☀</button>
+    </nav>
+  </div>
+</header>
+
+  <main class="contenedor">
+    <section class="error-404">
   <p class="error-404__codigo">404</p>
   <h1>Esta canción no está en el setlist</h1>
   <p>La página que buscas no existe o se ha movido de sitio.</p>
-  <p><a class="boton" href="{{ '/' | relative_url }}">Volver a la portada</a></p>
+  <p><a class="boton" href="/">Volver a la portada</a></p>
 </section>
+
+  </main>
+  <footer class="pie">
+  <div class="contenedor">
+    <p>© 2026 Dani Martínez · Hades in Flames</p>
+    <p>Hecho con Jekyll y alojado en GitHub Pages</p>
+  </div>
+</footer>
+
+</body>
+</html>
