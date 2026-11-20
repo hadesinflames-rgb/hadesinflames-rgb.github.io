@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/extra.css' | relative_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <!-- Aplica el tema guardado antes de pintar la página, para que no parpadee -->
+  <script>
+    try { if (localStorage.getItem('tema') === 'claro') document.documentElement.classList.add('tema-claro'); } catch (e) {}
+  </script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </head>
 <body>
   {% include header.html %}
